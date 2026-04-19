@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Supply Chain DApp</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-shape shape-1"></div>
+  <div class="background-shape shape-2"></div>
+
+  <header class="header">
+    <h1>Rohan Supply Chain DApp</h1>
+    <p>Polygon Mumbai + Hardhat + Ethers.js</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Wallet</h2>
+      <button id="connectWallet">Connect MetaMask</button>
+      <p id="walletAddress">Not connected</p>
+    </section>
+
+    <section class="card">
+      <h2>Contract Setup</h2>
+      <label>Contract Address</label>
+      <input id="contractAddress" placeholder="0x..." />
+      <button id="loadContract">Load Contract</button>
+      <p id="contractStatus">Contract not loaded</p>
+    </section>
+
+    <section class="card grid">
+      <h2>Register Product (Manufacturer)</h2>
+      <input id="productName" placeholder="Product name" />
+      <input id="productDescription" placeholder="Description" />
+      <button id="registerProduct">Register Product</button>
+    </section>
+
+    <section class="card grid">
+      <h2>Transfer Product</h2>
+      <input id="transferProductId" type="number" placeholder="Product ID" />
+      <input id="recipient" placeholder="Recipient address" />
+      <button id="transferProduct">Transfer Ownership</button>
+    </section>
+
+    <section class="card grid">
+      <h2>View Product</h2>
+      <input id="viewProductId" type="number" placeholder="Product ID" />
+      <button id="viewProduct">Fetch Product + History</button>
+      <button id="demoProduct" style="background: #6c63ff;">Load Demo Product #1</button>
+      <pre id="productOutput">No data</pre>
+    </section>
+  </main>
+
+  <footer class="footer">Built by Rohan for Assignment 3</footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
